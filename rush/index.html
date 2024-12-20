@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>cute clothes</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rush Project</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
-  <body class="flex flex-col min-h-screen h-full">
-    <h1 class="text-2xl font-bold">Rush</h1>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1 id="title">cute clothes</h1>
+        <div id="nav">
+          <a href="/">Home</a>
+          <a href="/pochette.html">Pochette</a>
+          <a href="/blouson.html">Blouson</a>
+        </div>
+      </header>
+      <main id="container">
+        <h2 class="text-2xl font-bold text-pink-700">Products</h2>
+        <div class="items-list">
+          <a href="/pochette.html">
+            <img
+              src="https://contents.multilingualcart.com/ori/50934/goods_img/goods_2292_4.jpg"
+            />
+            <h3>Double Ribbon Eco-Fur Pochette</h3>
+            <p>Price: <b class="text-pink-700">2,999฿</b></p>
+          </a>
+          <a href="/blouson.html">
+            <img
+              src="https://contents.multilingualcart.com/ori/50934/goods_img/goods_2050_18.jpg"
+            />
+            <h3>White Bunny Hooded Fur Blouson</h3>
+            <p>Price: <b class="text-pink-700">2,599฿</b></p>
+          </a>
+        </div>
+        <div class="flex flex-col space-y-1 text-lg text-pink-600">
+          <h2 class="text-2xl font-bold text-pink-700 pb-2">Members</h2>
+          <p>Sakditach Thanasodsai (sthanaso)</p>
+          <p>Pitsinee Vongsuppatham (pvongsup)</p>
+        </div>
+      </main>
+      <footer>
+        <h3 id="contact">Contact Information</h3>
+        <div id="contact-links">
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://www.facebook.com/lizlisa.jp"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Facebook
+            </a>
+          </div>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://www.instagram.com/lizlisa_tokyokawaiilife/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Instagram
+            </a>
+          </div>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://youtube.com/@lizlisaofficial5505?si=89tJOsn__DZzPsi3"
+              target="_blank"
+              rel="noreferrer noopener"
+              >YouTube
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

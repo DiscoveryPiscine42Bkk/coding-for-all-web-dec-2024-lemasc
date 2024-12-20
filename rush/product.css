@@ -1,0 +1,57 @@
+#two-columns {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #two-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.table-name,
+.table-detail {
+  --tw-border-opacity: 1;
+  border-color: rgb(190 24 93 / var(--tw-border-opacity, 1));
+  padding: 0.5rem;
+}
+
+.table-name {
+  border-right-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 242 248 / var(--tw-bg-opacity, 1));
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(131 24 67 / var(--tw-text-opacity, 1));
+}
+
+.table-detail {
+  background-color: rgb(253 242 248 / 0.1);
+}
+
+.product-table> :not([hidden])~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+  --tw-divide-opacity: 1;
+  border-color: rgb(190 24 93 / var(--tw-divide-opacity, 1));
+}
+
+.product-table {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(190 24 93 / var(--tw-border-opacity, 1));
+}
+
+.owl-carousel {
+  overflow: hidden;
+}
+
+.owl-carousel .owl-item img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.owl-theme .owl-nav.disabled+.owl-dots {
+  padding-top: 20px;
+}

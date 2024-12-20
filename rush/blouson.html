@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blouson : cute clothes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="tailwind.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="product.css" rel="stylesheet" />
+    <!-- begin carousel library -->
+    <link
+      rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <!-- end carousel library -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1 id="title">cute clothes</h1>
+        <div id="nav">
+          <a href="/">Home</a>
+          <a href="/pochette.html">Pochette</a>
+          <a href="/blouson.html">Blouson</a>
+        </div>
+      </header>
+      <main id="container">
+        <div id="two-columns">
+          <div class="owl-carousel owl-theme">
+            <img
+              src="https://contents.multilingualcart.com/ori/50934/goods_img/goods_2050_18.jpg"
+            />
+            <img
+              src="https://contents.multilingualcart.com/ori/50934/goods_img/goods_2050_20.jpg"
+            />
+            <img
+              src="https://contents.multilingualcart.com/ori/50934/goods_img/goods_2050_19.jpg"
+            />
+          </div>
+          <div class="flex flex-col gap-4">
+            <h2 class="text-3xl font-bold text-pink-700">
+              White Bunny Hooded Fur Blouson
+            </h2>
+            <h3 class="text-2xl font-medium text-pink-600">
+              Price: <b class="text-pink-700">2,999฿</b>
+            </h3>
+            <p>
+              A cute fur blouson with a large hood with rabbit ears is now
+              available with a handsome lace-up sleeve design. The ribbon has
+              sparkling heart bijoux. The rabbit ears can be detached with a
+              button, so you can arrange it according to your coordinates or
+              mood of the day. The relaxed, oversized silhouette gives it a
+              cute, casual look. The fur material is firm and dense, so it will
+              keep you warm.
+            </p>
+            <div class="product-table">
+              <div class="table-name">Material</div>
+              <div class="table-detail">
+                <p>Outer fabric 100% Polyester / Inner fabric 100% Polyester</p>
+              </div>
+              <div class="table-name">Measurements</div>
+              <div class="table-detail">
+                <p>
+                  Body length 74cm / Body width 60cm / Shoulder width 57cm /
+                  Sleeve length 56cm / Cuffs 9.5cm / Train width 45cm
+                </p>
+              </div>
+              <div class="table-name">Size</div>
+              <div class="table-detail">Free</div>
+            </div>
+            <button
+              onclick="addToCart(`White Bunny Hooded Fur Blouson`)"
+              class="bg-pink-700 hover:bg-pink-800 transition-colors text-white p-2 rounded-md"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h3 id="contact">Contact Information</h3>
+        <div id="contact-links">
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/b9/2023_Facebook_icon.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://www.facebook.com/lizlisa.jp"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Facebook
+            </a>
+          </div>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://www.instagram.com/lizlisa_tokyokawaiilife/"
+              target="_blank"
+              rel="noreferrer noopener"
+              >Instagram
+            </a>
+          </div>
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+              width="30"
+              height="30"
+            />
+            <a
+              href="https://youtube.com/@lizlisaofficial5505?si=89tJOsn__DZzPsi3"
+              target="_blank"
+              rel="noreferrer noopener"
+              >YouTube
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
