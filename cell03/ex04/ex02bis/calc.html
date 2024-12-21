@@ -61,15 +61,20 @@
         };
         const MAX_SAFE_32BIT_INTEGER = 2147483647;
         const MIN_SAFE_32BIT_INTERGER = -2147483647;
+        const isSafeInteger = (number) => {
+          if (
+            number > MIN_SAFE_32BIT_INTERGER &&
+            number < MAX_SAFE_32BIT_INTEGER
+          ) {
+            return number;
+          }
+        };
         function asPositiveInt(value) {
           let isPositive = /^[0-9]+$/.test(value);
           if (isPositive) {
-            const value = parseInt(value, 10);
-            if (
-              value >= MIN_SAFE_32BIT_INTERGER &&
-              value <= MAX_SAFE_32BIT_INTEGER
-            ) {
-              return value;
+            const number = parseInt(value, 10);
+            if(isSafeInteger(number)) {
+              return number;
             }
           }
           return NaN;
@@ -106,6 +111,10 @@
             default:
               logAlert("Error :(");
               return;
+          }
+
+          if(!isSafeInteger(result)) {
+            logAlert("Error :(")
           }
 
           logAlert(`Result: ${result}`);
