@@ -56,10 +56,9 @@
           console.log(msg);
         };
         function asPositiveInt(value) {
-          let num = parseFloat(value)
-          console.log(num)
-          if(Number.isInteger(num) && num >= 0) {
-            return num
+          let isPositive = /^[0-9]+$/.test(value)
+          if(isPositive) {
+            return parseInt(value)
           }
           return NaN
         }

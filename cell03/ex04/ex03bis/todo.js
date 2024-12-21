@@ -25,7 +25,7 @@ $(document).ready(() => {
   }
 
   function loadToDo() {
-    const toDoArray = loadFromCookie("todo") || loadFromLocalStorage("todo");
+    const toDoArray = loadFromCookie("todo")
     if (toDoArray) {
       toDoArray.reverse().forEach((item) => addToDo(item));
     }
@@ -40,11 +40,7 @@ $(document).ready(() => {
 
   function saveToCookie(key, value) {
     const json = JSON.stringify(value);
-    document.cookie = key + "=" + encodeURIComponent(json) + ";path=/";
-
-    if (!loadFromCookie(key)) {
-      localStorage.setItem(key, json);
-    }
+    document.cookie = key + "=" + encodeURIComponent(json) + ";path=/;max-age=31536000";
   }
 
   function loadFromCookie(key) {
@@ -57,9 +53,5 @@ $(document).ready(() => {
     } catch {
       return null;
     }
-  }
-
-  function loadFromLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key));
   }
 });
