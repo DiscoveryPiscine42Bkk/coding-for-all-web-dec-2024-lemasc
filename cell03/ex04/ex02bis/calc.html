@@ -55,12 +55,19 @@
           alert(msg);
           console.log(msg);
         };
+        function asPositiveInt(value) {
+          let num = parseFloat(value)
+          if(Number.isInteger(num) && num >= 0) {
+            return num
+          }
+          return NaN
+        }
         function calculate() {
           const left = parseInt($("#left").val());
           const right = parseInt($("right").val());
           const operator = $("#operator").val();
 
-          if (left < 0 || right < 0 || isNaN(left) || isNaN(right)) {
+          if (isNaN(left) || isNaN(right)) {
             logAlert("Error :(");
             return;
           }
