@@ -57,14 +57,15 @@
         };
         function asPositiveInt(value) {
           let num = parseFloat(value)
+          console.log(num)
           if(Number.isInteger(num) && num >= 0) {
             return num
           }
           return NaN
         }
         function calculate() {
-          const left = parseInt($("#left").val());
-          const right = parseInt($("right").val());
+          const left = asPositiveInt($("#left").val());
+          const right = asPositiveInt($("#right").val());
           const operator = $("#operator").val();
 
           if (isNaN(left) || isNaN(right)) {
