@@ -8,6 +8,7 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
+
       input {
         width: 100px;
         padding: 8px;
@@ -15,12 +16,14 @@
         border: 1px solid #ccc;
         border-radius: 5px;
       }
+
       select {
         padding: 8px;
         margin: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
       }
+
       button {
         padding-block: 8px;
         padding-inline: 15px;
@@ -32,6 +35,7 @@
       }
     </style>
   </head>
+
   <body>
     <h1>It's over 9000!</h1>
     <input type="text" id="left" placeholder="Left" />
@@ -55,12 +59,20 @@
           alert(msg);
           console.log(msg);
         };
+        const MAX_SAFE_32BIT_INTEGER = 2147483647;
+        const MIN_SAFE_32BIT_INTERGER = -2147483647;
         function asPositiveInt(value) {
-          let isPositive = /^[0-9]+$/.test(value)
-          if(isPositive) {
-            return parseInt(value)
+          let isPositive = /^[0-9]+$/.test(value);
+          if (isPositive) {
+            const value = parseInt(value, 10);
+            if (
+              value >= MIN_SAFE_32BIT_INTERGER &&
+              value <= MAX_SAFE_32BIT_INTEGER
+            ) {
+              return value;
+            }
           }
-          return NaN
+          return NaN;
         }
         function calculate() {
           const left = asPositiveInt($("#left").val());
